@@ -6,9 +6,11 @@ package ex03.pyrmont.connector.http;
  *  These two classes will be explained in Chapter 4.
  */
 import ex03.pyrmont.connector.RequestStream;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Cookie;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletInputStream;
 import java.security.Principal;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,8 +21,12 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 import org.apache.catalina.util.Enumerator;
 import org.apache.catalina.util.ParameterMap;
 import org.apache.catalina.util.RequestUtil;
@@ -476,51 +482,7 @@ public class HttpRequest implements HttpServletRequest {
     return null;
   }
 
-    public int getRemotePort() {
-        return 0;
-    }
-
-    public String getLocalName() {
-        return null;
-    }
-
-    public String getLocalAddr() {
-        return null;
-    }
-
-    public int getLocalPort() {
-        return 0;
-    }
-
-    public ServletContext getServletContext() {
-        return null;
-    }
-
-    public AsyncContext startAsync() {
-        return null;
-    }
-
-    public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) {
-        return null;
-    }
-
-    public boolean isAsyncStarted() {
-        return false;
-    }
-
-    public boolean isAsyncSupported() {
-        return false;
-    }
-
-    public AsyncContext getAsyncContext() {
-        return null;
-    }
-
-    public DispatcherType getDispatcherType() {
-        return null;
-    }
-
-    public String getRemoteAddr() {
+  public String getRemoteAddr() {
     return null;
   }
 
@@ -584,27 +546,7 @@ public class HttpRequest implements HttpServletRequest {
     return isRequestedSessionIdFromURL();
   }
 
-    public boolean authenticate(HttpServletResponse httpServletResponse) throws IOException, ServletException {
-        return false;
-    }
-
-    public void login(String s, String s1) throws ServletException {
-
-    }
-
-    public void logout() throws ServletException {
-
-    }
-
-    public Collection getParts() throws IOException, IllegalStateException, ServletException {
-        return null;
-    }
-
-    public Part getPart(String s) throws IOException, IllegalStateException, ServletException {
-        return null;
-    }
-
-    public boolean isRequestedSessionIdFromURL() {
+  public boolean isRequestedSessionIdFromURL() {
     return false;
   }
 
@@ -637,5 +579,4 @@ public class HttpRequest implements HttpServletRequest {
 
   public void setCharacterEncoding(String encoding) throws UnsupportedEncodingException {
   }
-
 }

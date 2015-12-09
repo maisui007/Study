@@ -73,10 +73,6 @@ public class Response implements ServletResponse {
     return null;
   }
 
-  public String getContentType() {
-    return null;
-  }
-
   public Locale getLocale() {
     return null;
   }
@@ -90,11 +86,6 @@ public class Response implements ServletResponse {
     // but print() will not.
     writer = new PrintWriter(output, true);
     return writer;
-  }
-
-
-  public void setCharacterEncoding(String s) {
-
   }
 
   public boolean isCommitted() {

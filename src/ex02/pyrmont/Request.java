@@ -7,7 +7,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
-import javax.servlet.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletInputStream;
+import javax.servlet.ServletRequest;
 
 
 public class Request implements ServletRequest {
@@ -63,59 +65,6 @@ public class Request implements ServletRequest {
   }
 
   public String getRealPath(String path) {
-    return null;
-  }
-
-
-  public int getRemotePort() {
-    return 0;
-  }
-
-
-  public String getLocalName() {
-    return null;
-  }
-
-
-  public String getLocalAddr() {
-    return null;
-  }
-
-
-  public int getLocalPort() {
-    return 0;
-  }
-
-
-  public ServletContext getServletContext() {
-    return null;
-  }
-
-  public AsyncContext startAsync() {
-    return null;
-  }
-
-
-  public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) {
-    return null;
-  }
-
-
-  public boolean isAsyncStarted() {
-    return false;
-  }
-
-
-  public boolean isAsyncSupported() {
-    return false;
-  }
-
-
-  public AsyncContext getAsyncContext() {
-    return null;
-  }
-
-  public DispatcherType getDispatcherType() {
     return null;
   }
 

@@ -15,8 +15,6 @@ public class HttpConnector implements Runnable {
   }
 
   public void run() {
-    //启动web服务
-    System.out.println("start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     ServerSocket serverSocket = null;
     int port = 8080;
     try {

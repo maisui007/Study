@@ -4,12 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
-import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Cookie;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletInputStream;
 
 public class HttpRequestFacade implements HttpServletRequest {
 
@@ -128,50 +130,6 @@ public class HttpRequestFacade implements HttpServletRequest {
     return request.getRealPath(path);
   }
 
-  public int getRemotePort() {
-    return 0;
-  }
-
-  public String getLocalName() {
-    return null;
-  }
-
-  public String getLocalAddr() {
-    return null;
-  }
-
-  public int getLocalPort() {
-    return 0;
-  }
-
-  public ServletContext getServletContext() {
-    return null;
-  }
-
-  public AsyncContext startAsync() {
-    return null;
-  }
-
-  public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) {
-    return null;
-  }
-
-  public boolean isAsyncStarted() {
-    return false;
-  }
-
-  public boolean isAsyncSupported() {
-    return false;
-  }
-
-  public AsyncContext getAsyncContext() {
-    return null;
-  }
-
-  public DispatcherType getDispatcherType() {
-    return null;
-  }
-
   public String getRemoteAddr() {
     return request.getRemoteAddr();
   }
@@ -234,26 +192,6 @@ public class HttpRequestFacade implements HttpServletRequest {
 
   public boolean isRequestedSessionIdFromUrl() {
     return request.isRequestedSessionIdFromURL();
-  }
-
-  public boolean authenticate(HttpServletResponse httpServletResponse) throws IOException, ServletException {
-    return false;
-  }
-
-  public void login(String s, String s1) throws ServletException {
-
-  }
-
-  public void logout() throws ServletException {
-
-  }
-
-  public Collection getParts() throws IOException, IllegalStateException, ServletException {
-    return null;
-  }
-
-  public Part getPart(String s) throws IOException, IllegalStateException, ServletException {
-    return null;
   }
 
   public boolean isRequestedSessionIdFromURL() {

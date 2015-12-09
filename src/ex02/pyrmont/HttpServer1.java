@@ -27,7 +27,6 @@ public class HttpServer1 {
   }
 
   public void await() {
-    System.out.println("启动web服务器");
     ServerSocket serverSocket = null;
     int port = 8080;
     try {
@@ -61,7 +60,8 @@ public class HttpServer1 {
         if (request.getUri().startsWith("/servlet/")) {
           ServletProcessor1 processor = new ServletProcessor1();
           processor.process(request, response);
-        } else {
+        }
+        else {
           StaticResourceProcessor processor = new StaticResourceProcessor();
           processor.process(request, response);
         }

@@ -15,7 +15,6 @@ public class ServletProcessor2 {
 
     String uri = request.getUri();
     String servletName = uri.substring(uri.lastIndexOf("/") + 1);
-    servletName = "servlet."+servletName;
     URLClassLoader loader = null;
 
     try {
