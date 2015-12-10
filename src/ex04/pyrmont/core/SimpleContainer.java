@@ -34,21 +34,21 @@ public class SimpleContainer implements Container {
   public String getInfo() {
     return null;
   }
-
+//加载器
   public Loader getLoader() {
     return null;
   }
 
   public void setLoader(Loader loader) {
   }
-
+//记录器
   public Logger getLogger() {
     return null;
   }
 
   public void setLogger(Logger logger) {
   }
-
+//管理器
   public Manager getManager() {
     return null;
   }
@@ -83,24 +83,24 @@ public class SimpleContainer implements Container {
 
   public void setParentClassLoader(ClassLoader parent) {
   }
-
+//领域
   public Realm getRealm() {
     return null;
   }
 
   public void setRealm(Realm realm) {
   }
-
+//资源
   public DirContext getResources() {
     return null;
   }
 
   public void setResources(DirContext resources) {
   }
-
+//添加子容器
   public void addChild(Container child) {
   }
-
+//添加容器监听
   public void addContainerListener(ContainerListener listener) {
   }
 
@@ -109,7 +109,7 @@ public class SimpleContainer implements Container {
 
   public void addPropertyChangeListener(PropertyChangeListener listener) {
   }
-
+//查询某个子容器
   public Container findChild(String name) {
     return null;
   }
